@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/andrew/Library/Developer/Shared/Documentation/DocSets/net.landofstuff.Pepper.docset
+Time: 2013-06-08 01:09:37 +0000
