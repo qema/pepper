@@ -26,21 +26,28 @@
 @interface PPAnimationMoveTo : PPAnimationElement
 @property (nonatomic) CGPoint startPosition;
 @property (nonatomic) CGPoint destPosition;
--(id)initWithStageElement:(PPStageElement *)element dest:(CGPoint)destPosition duration:(float)duration;
-+(PPAnimationMoveTo *)moveToWithStageElement:(PPStageElement *)element dest:(CGPoint)destPosition duration:(float)duration;
+-(id)initWithStageElement:(PPStageElement *)element destPosition:(CGPoint)destPosition duration:(float)duration;
++(PPAnimationMoveTo *)moveToWithStageElement:(PPStageElement *)element destPosition:(CGPoint)destPosition duration:(float)duration;
 @end
 
 @interface PPAnimationScaleTo : PPAnimationElement
 @property (nonatomic) CGPoint startScale;
 @property (nonatomic) CGPoint destScale;
--(id)initWithStageElement:(PPStageElement *)element dest:(CGPoint)destScale duration:(float)duration;
-+(PPAnimationScaleTo *)scaletoWithStageElement:(PPStageElement *)element dest:(CGPoint)destScale duration:(float)duration;
+-(id)initWithStageElement:(PPStageElement *)element destScale:(CGPoint)destScale duration:(float)duration;
++(PPAnimationScaleTo *)scaletoWithStageElement:(PPStageElement *)element destScale:(CGPoint)destScale duration:(float)duration;
 @end
 
 @interface PPAnimationFrameTo : PPAnimationElement
 @property (nonatomic) PPSpriteFrameInfo *destFrame;
--(id)initWithSprite:(PPSprite *)sprite dest:(PPSpriteFrameInfo *)frame duration:(float)duration;
-+(PPAnimationFrameTo *)frameToWithSprite:(PPSprite *)sprite dest:(PPSpriteFrameInfo *)frame duration:(float)duration;
+-(id)initWithSprite:(PPSprite *)sprite destFrame:(PPSpriteFrameInfo *)frame duration:(float)duration;
++(PPAnimationFrameTo *)frameToWithSprite:(PPSprite *)sprite destFrame:(PPSpriteFrameInfo *)frame duration:(float)duration;
+@end
+
+@interface PPAnimationRotateTo : PPAnimationElement
+@property (nonatomic) float startRotation;
+@property (nonatomic) float destRotation;
+-(id)initWithStageElement:(PPStageElement *)element destRotation:(float)rotation duration:(float)duration;
++(PPAnimationRotateTo *)rotateToWithStageElement:(PPStageElement *)element destRotation:(float)rotation duration:(float)duration;
 @end
 
 @interface PPAnimationPause : PPAnimationElement
@@ -55,6 +62,7 @@
 
 -(void)stageElement:(PPStageElement *)element moveTo:(CGPoint)pos duration:(float)duration;
 -(void)stageElement:(PPStageElement *)element scaleTo:(CGPoint)scale duration:(float)duration;
+-(void)stageElement:(PPStageElement *)element rotateTo:(float)rotation duration:(float)duration;
 -(void)sprite:(PPSprite *)sprite frameTo:(PPSpriteFrameInfo *)frame duration:(float)duration;
 -(void)stageElement:(PPStageElement *)element pause:(float)duration;
 -(void)addAnimation:(PPAnimationElement *)element;

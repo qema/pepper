@@ -42,11 +42,11 @@
 
 // PPAnimationMoveTo
 @implementation PPAnimationMoveTo
-+(PPAnimationMoveTo *)moveToWithStageElement:(PPStageElement *)element dest:(CGPoint)destPosition duration:(float)duration
++(PPAnimationMoveTo *)moveToWithStageElement:(PPStageElement *)element destPosition:(CGPoint)destPosition duration:(float)duration
 {
-    return [[PPAnimationMoveTo alloc] initWithStageElement:element dest:destPosition duration:duration];
+    return [[PPAnimationMoveTo alloc] initWithStageElement:element destPosition:destPosition duration:duration];
 }
--(id)initWithStageElement:(PPStageElement *)element dest:(CGPoint)destPosition duration:(float)duration
+-(id)initWithStageElement:(PPStageElement *)element destPosition:(CGPoint)destPosition duration:(float)duration
 {
     if (self=[super initWithStageElement:element duration:duration]) {
         _destPosition = destPosition;
@@ -67,11 +67,11 @@
 
 // PPAnimationScaleTo
 @implementation PPAnimationScaleTo
-+(PPAnimationScaleTo *)scaletoWithStageElement:(PPStageElement *)element dest:(CGPoint)destScale duration:(float)duration
++(PPAnimationScaleTo *)scaletoWithStageElement:(PPStageElement *)element destScale:(CGPoint)destScale duration:(float)duration
 {
-    return [[PPAnimationScaleTo alloc] initWithStageElement:element dest:destScale duration:duration];
+    return [[PPAnimationScaleTo alloc] initWithStageElement:element destScale:destScale duration:duration];
 }
--(id)initWithStageElement:(PPStageElement *)element dest:(CGPoint)destScale duration:(float)duration
+-(id)initWithStageElement:(PPStageElement *)element destScale:(CGPoint)destScale duration:(float)duration
 {
     if (self=[super initWithStageElement:element duration:duration]) {
         _destScale = destScale;
@@ -95,11 +95,11 @@
 
 // PPAnimationFrameTo
 @implementation PPAnimationFrameTo
-+(PPAnimationFrameTo *)frameToWithSprite:(PPSprite *)sprite dest:(PPSpriteFrameInfo *)frame duration:(float)duration
++(PPAnimationFrameTo *)frameToWithSprite:(PPSprite *)sprite destFrame:(PPSpriteFrameInfo *)frame duration:(float)duration
 {
-    return [[PPAnimationFrameTo alloc] initWithSprite:sprite dest:frame duration:duration];
+    return [[PPAnimationFrameTo alloc] initWithSprite:sprite destFrame:frame duration:duration];
 }
--(id)initWithSprite:(PPSprite *)sprite dest:(PPSpriteFrameInfo *)frame duration:(float)duration
+-(id)initWithSprite:(PPSprite *)sprite destFrame:(PPSpriteFrameInfo *)frame duration:(float)duration
 {
     if (self=[super initWithStageElement:sprite duration:duration]) {
         _destFrame = frame;
@@ -110,6 +110,31 @@
 {
     [super update:delta];
     if (self.hasFinished) ((PPSprite *)self.stageElement).frameInfo = self.destFrame;
+}
+@end
+
+// PPAnimationRotateTo
+@implementation PPAnimationRotateTo
++(PPAnimationRotateTo *)rotateToWithStageElement:(PPStageElement *)element destRotation:(float)rotation duration:(float)duration
+{
+    return [[PPAnimationRotateTo alloc] initWithStageElement:element destRotation:rotation duration:duration];
+}
+-(id)initWithStageElement:(PPStageElement *)element destRotation:(float)destRotation duration:(float)duration
+{
+    if (self=[super initWithStageElement:element duration:duration]) {
+        _destRotation = destRotation;
+    }
+    return self;
+}
+-(void)start
+{
+    [super start];
+    self.startRotation = self.stageElement.rotation;
+}
+-(void)update:(float)delta
+{
+    [super update:delta];
+    self.stageElement.rotation = self.startRotation + self.timeElapsed / self.duration * (self.destRotation-self.startRotation);
 }
 @end
 
@@ -144,23 +169,30 @@
 
 -(void)stageElement:(PPStageElement *)element moveTo:(CGPoint)pos duration:(float)duration
 {
-    PPAnimationMoveTo *moveTo = [[PPAnimationMoveTo alloc] initWithStageElement:element dest:pos duration:duration];
+    PPAnimationMoveTo *moveTo = [[PPAnimationMoveTo alloc] initWithStageElement:element destPosition:pos duration:duration];
     [self addAnimation:moveTo];
     [self runAnimation:moveTo];
 }
 
 -(void)stageElement:(PPStageElement *)element scaleTo:(CGPoint)scale duration:(float)duration
 {
-    PPAnimationScaleTo *scaleTo = [[PPAnimationScaleTo alloc] initWithStageElement:element dest:scale duration:duration];
+    PPAnimationScaleTo *scaleTo = [[PPAnimationScaleTo alloc] initWithStageElement:element destScale:scale duration:duration];
     [self addAnimation:scaleTo];
     [self runAnimation:scaleTo];
 }
 
 -(void)sprite:(PPSprite *)sprite frameTo:(PPSpriteFrameInfo *)frame duration:(float)duration
 {
-    PPAnimationFrameTo *frameTo = [[PPAnimationFrameTo alloc] initWithSprite:sprite dest:frame duration:duration];
+    PPAnimationFrameTo *frameTo = [[PPAnimationFrameTo alloc] initWithSprite:sprite destFrame:frame duration:duration];
     [self addAnimation:frameTo];
     [self runAnimation:frameTo];
+}
+
+-(void)stageElement:(PPStageElement *)element rotateTo:(float)rotation duration:(float)duration
+{
+    PPAnimationRotateTo *rotateTo = [[PPAnimationRotateTo alloc] initWithStageElement:element destRotation:rotation duration:duration];
+    [self addAnimation:rotateTo];
+    [self runAnimation:rotateTo];
 }
 
 -(void)stageElement:(PPStageElement *)element pause:(float)duration
