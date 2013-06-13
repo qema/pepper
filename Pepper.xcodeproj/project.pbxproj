@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4973F04817615DA600DAD940 /* PPCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973F04717615DA600DAD940 /* PPCamera.m */; };
+		4935700D176A834900D9F426 /* PPTilemap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4935700C176A834900D9F426 /* PPTilemap.m */; };
 		4973F04B1761615F00DAD940 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973F04A1761615F00DAD940 /* ViewController.m */; };
-		499A5C8B175E8E6F000C811E /* PPStageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 499A5C8A175E8E6E000C811E /* PPStageElement.m */; };
 		499A5C8E175E8FBD000C811E /* TestStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 499A5C8D175E8FBD000C811E /* TestStage.m */; };
 		49D058DB175D5D8400CA0F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D058DA175D5D8400CA0F2E /* UIKit.framework */; };
 		49D058DD175D5D8400CA0F2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D058DC175D5D8400CA0F2E /* Foundation.framework */; };
@@ -17,38 +16,59 @@
 		49D058E5175D5D8400CA0F2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49D058E3175D5D8400CA0F2E /* InfoPlist.strings */; };
 		49D058E7175D5D8400CA0F2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D058E6175D5D8400CA0F2E /* main.m */; };
 		49D058EB175D5D8400CA0F2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D058EA175D5D8400CA0F2E /* AppDelegate.m */; };
-		49D058ED175D5D8400CA0F2E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D058EC175D5D8400CA0F2E /* Default.png */; };
-		49D058EF175D5D8400CA0F2E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D058EE175D5D8400CA0F2E /* Default@2x.png */; };
-		49D058F1175D5D8400CA0F2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D058F0175D5D8400CA0F2E /* Default-568h@2x.png */; };
-		49D058F4175D5D8400CA0F2E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D058F2175D5D8400CA0F2E /* MainStoryboard_iPhone.storyboard */; };
-		49D058F7175D5D8400CA0F2E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D058F5175D5D8400CA0F2E /* MainStoryboard_iPad.storyboard */; };
-		49D058FA175D5D8400CA0F2E /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D058F9175D5D8400CA0F2E /* PPViewController.m */; };
 		49D05902175D5E3200CA0F2E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D05900175D5E3200CA0F2E /* GLKit.framework */; };
 		49D05903175D5E3200CA0F2E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D05901175D5E3200CA0F2E /* OpenGLES.framework */; };
-		49D05906175D5FB500CA0F2E /* PPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D05905175D5FB400CA0F2E /* PPObject.m */; };
-		49D0590C175D601400CA0F2E /* PPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0590B175D601400CA0F2E /* PPEngine.m */; };
-		49D05910175D614200CA0F2E /* PPStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0590F175D614200CA0F2E /* PPStage.m */; };
-		49D05913175D625900CA0F2E /* PPLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D05912175D625900CA0F2E /* PPLayer.m */; };
-		49D05916175D632100CA0F2E /* PPTextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D05915175D632100CA0F2E /* PPTextureAtlas.m */; };
-		49D0591A175D659400CA0F2E /* PPFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D05919175D659400CA0F2E /* PPFileUtils.m */; };
-		49D05920175D67A200CA0F2E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0591E175D67A200CA0F2E /* test.png */; };
-		49D05925175D6C9900CA0F2E /* PPSpritesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D05924175D6C9900CA0F2E /* PPSpritesheet.m */; };
-		49D05928175D6CAE00CA0F2E /* PPTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D05927175D6CAD00CA0F2E /* PPTileset.m */; };
-		49D0592F175D6F3700CA0F2E /* PPSpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0592E175D6F3700CA0F2E /* PPSpriteLayer.m */; };
-		49D05932175D711100CA0F2E /* PPSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D05931175D711000CA0F2E /* PPSprite.m */; };
-		49D92C7E17628322004BE571 /* PPSpriteFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D92C7D17628322004BE571 /* PPSpriteFrameInfo.m */; };
-		49D92C841762B27A004BE571 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49D92C831762B27A004BE571 /* test.plist */; };
-		49E6F65B176651E200B8F20D /* PPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E6F65A176651E200B8F20D /* PPAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		493441211769206600EE09EA /* ppVectors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ppVectors.h; sourceTree = "<group>"; };
-		4973F04617615DA600DAD940 /* PPCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCamera.h; sourceTree = "<group>"; };
-		4973F04717615DA600DAD940 /* PPCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCamera.m; sourceTree = "<group>"; };
+		49356FCF176A817600D9F426 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		49356FD0176A817600D9F426 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		49356FD1176A817600D9F426 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
+		49356FD2176A817600D9F426 /* map.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = map.tmx; path = Resources/map.tmx; sourceTree = "<group>"; };
+		49356FD3176A817600D9F426 /* Pepper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pepper-Info.plist"; path = "Resources/Pepper-Info.plist"; sourceTree = "<group>"; };
+		49356FD4176A817600D9F426 /* test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = test.plist; path = Resources/test.plist; sourceTree = "<group>"; };
+		49356FD5176A817600D9F426 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = Resources/test.png; sourceTree = "<group>"; };
+		49356FD6176A817600D9F426 /* test.tps */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.tps; path = Resources/test.tps; sourceTree = "<group>"; };
+		49356FD7176A817600D9F426 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tileset.png; path = Resources/tileset.png; sourceTree = "<group>"; };
+		49356FD8176A819300D9F426 /* pepper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pepper.h; path = lib/pepper.h; sourceTree = "<group>"; };
+		49356FD9176A819300D9F426 /* PPAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPAnimation.h; path = lib/PPAnimation.h; sourceTree = "<group>"; };
+		49356FDA176A819300D9F426 /* PPAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPAnimation.m; path = lib/PPAnimation.m; sourceTree = "<group>"; };
+		49356FDF176A819300D9F426 /* PPCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPCamera.h; path = lib/PPCamera.h; sourceTree = "<group>"; };
+		49356FE0176A819300D9F426 /* PPCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPCamera.m; path = lib/PPCamera.m; sourceTree = "<group>"; };
+		49356FE1176A819300D9F426 /* ppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ppConstants.h; path = lib/ppConstants.h; sourceTree = "<group>"; };
+		49356FE2176A819300D9F426 /* PPEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPEngine.h; path = lib/PPEngine.h; sourceTree = "<group>"; };
+		49356FE3176A819300D9F426 /* PPEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPEngine.m; path = lib/PPEngine.m; sourceTree = "<group>"; };
+		49356FE4176A819300D9F426 /* PPFileUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPFileUtils.h; path = lib/PPFileUtils.h; sourceTree = "<group>"; };
+		49356FE5176A819300D9F426 /* PPFileUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPFileUtils.m; path = lib/PPFileUtils.m; sourceTree = "<group>"; };
+		49356FE8176A819300D9F426 /* PPLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPLayer.h; path = lib/PPLayer.h; sourceTree = "<group>"; };
+		49356FE9176A819300D9F426 /* PPLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPLayer.m; path = lib/PPLayer.m; sourceTree = "<group>"; };
+		49356FEC176A819300D9F426 /* PPObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPObject.h; path = lib/PPObject.h; sourceTree = "<group>"; };
+		49356FED176A819300D9F426 /* PPObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPObject.m; path = lib/PPObject.m; sourceTree = "<group>"; };
+		49356FF0176A819300D9F426 /* PPSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPSprite.h; path = lib/PPSprite.h; sourceTree = "<group>"; };
+		49356FF1176A819300D9F426 /* PPSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPSprite.m; path = lib/PPSprite.m; sourceTree = "<group>"; };
+		49356FF2176A819300D9F426 /* PPSpriteFrameInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPSpriteFrameInfo.h; path = lib/PPSpriteFrameInfo.h; sourceTree = "<group>"; };
+		49356FF3176A819300D9F426 /* PPSpriteFrameInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPSpriteFrameInfo.m; path = lib/PPSpriteFrameInfo.m; sourceTree = "<group>"; };
+		49356FF4176A819300D9F426 /* PPSpriteLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPSpriteLayer.h; path = lib/PPSpriteLayer.h; sourceTree = "<group>"; };
+		49356FF5176A819300D9F426 /* PPSpriteLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPSpriteLayer.m; path = lib/PPSpriteLayer.m; sourceTree = "<group>"; };
+		49356FF6176A819300D9F426 /* PPSpritesheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPSpritesheet.h; path = lib/PPSpritesheet.h; sourceTree = "<group>"; };
+		49356FF7176A819300D9F426 /* PPSpritesheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPSpritesheet.m; path = lib/PPSpritesheet.m; sourceTree = "<group>"; };
+		49356FF8176A819300D9F426 /* PPStage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPStage.h; path = lib/PPStage.h; sourceTree = "<group>"; };
+		49356FF9176A819400D9F426 /* PPStage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPStage.m; path = lib/PPStage.m; sourceTree = "<group>"; };
+		49356FFC176A819400D9F426 /* PPStageElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPStageElement.h; path = lib/PPStageElement.h; sourceTree = "<group>"; };
+		49356FFD176A819400D9F426 /* PPStageElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPStageElement.m; path = lib/PPStageElement.m; sourceTree = "<group>"; };
+		49356FFE176A819400D9F426 /* PPTextureAtlas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPTextureAtlas.h; path = lib/PPTextureAtlas.h; sourceTree = "<group>"; };
+		49356FFF176A819400D9F426 /* PPTextureAtlas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPTextureAtlas.m; path = lib/PPTextureAtlas.m; sourceTree = "<group>"; };
+		49357002176A819400D9F426 /* PPTileset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPTileset.h; path = lib/PPTileset.h; sourceTree = "<group>"; };
+		49357003176A819400D9F426 /* PPTileset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPTileset.m; path = lib/PPTileset.m; sourceTree = "<group>"; };
+		49357004176A819400D9F426 /* ppVectors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ppVectors.h; path = lib/ppVectors.h; sourceTree = "<group>"; };
+		49357005176A819400D9F426 /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPViewController.h; path = lib/PPViewController.h; sourceTree = "<group>"; };
+		49357006176A819400D9F426 /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPViewController.m; path = lib/PPViewController.m; sourceTree = "<group>"; };
+		4935700B176A834900D9F426 /* PPTilemap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPTilemap.h; path = lib/PPTilemap.h; sourceTree = "<group>"; };
+		4935700C176A834900D9F426 /* PPTilemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPTilemap.m; path = lib/PPTilemap.m; sourceTree = "<group>"; };
+		49357011176A838F00D9F426 /* PPTileLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPTileLayer.h; path = lib/PPTileLayer.h; sourceTree = "<group>"; };
+		49357012176A838F00D9F426 /* PPTileLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPTileLayer.m; path = lib/PPTileLayer.m; sourceTree = "<group>"; };
 		4973F0491761615F00DAD940 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4973F04A1761615F00DAD940 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		499A5C89175E8E6E000C811E /* PPStageElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPStageElement.h; sourceTree = "<group>"; };
-		499A5C8A175E8E6E000C811E /* PPStageElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPStageElement.m; sourceTree = "<group>"; };
 		499A5C8C175E8FBD000C811E /* TestStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestStage.h; sourceTree = "<group>"; };
 		499A5C8D175E8FBD000C811E /* TestStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestStage.m; sourceTree = "<group>"; };
 		49D058D7175D5D8400CA0F2E /* Pepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,43 +81,8 @@
 		49D058E8175D5D8400CA0F2E /* Pepper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pepper-Prefix.pch"; sourceTree = "<group>"; };
 		49D058E9175D5D8400CA0F2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49D058EA175D5D8400CA0F2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		49D058EC175D5D8400CA0F2E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		49D058EE175D5D8400CA0F2E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		49D058F0175D5D8400CA0F2E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		49D058F3175D5D8400CA0F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		49D058F6175D5D8400CA0F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		49D058F8175D5D8400CA0F2E /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
-		49D058F9175D5D8400CA0F2E /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPViewController.m; sourceTree = "<group>"; };
 		49D05900175D5E3200CA0F2E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		49D05901175D5E3200CA0F2E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		49D05904175D5FB400CA0F2E /* PPObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPObject.h; sourceTree = "<group>"; };
-		49D05905175D5FB400CA0F2E /* PPObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPObject.m; sourceTree = "<group>"; };
-		49D0590A175D601400CA0F2E /* PPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEngine.h; sourceTree = "<group>"; };
-		49D0590B175D601400CA0F2E /* PPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPEngine.m; sourceTree = "<group>"; };
-		49D0590D175D60A900CA0F2E /* pepper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pepper.h; sourceTree = "<group>"; };
-		49D0590E175D614100CA0F2E /* PPStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPStage.h; sourceTree = "<group>"; };
-		49D0590F175D614200CA0F2E /* PPStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPStage.m; sourceTree = "<group>"; };
-		49D05911175D625900CA0F2E /* PPLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLayer.h; sourceTree = "<group>"; };
-		49D05912175D625900CA0F2E /* PPLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLayer.m; sourceTree = "<group>"; };
-		49D05914175D632100CA0F2E /* PPTextureAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTextureAtlas.h; sourceTree = "<group>"; };
-		49D05915175D632100CA0F2E /* PPTextureAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextureAtlas.m; sourceTree = "<group>"; };
-		49D05918175D659400CA0F2E /* PPFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFileUtils.h; sourceTree = "<group>"; };
-		49D05919175D659400CA0F2E /* PPFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFileUtils.m; sourceTree = "<group>"; };
-		49D0591E175D67A200CA0F2E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
-		49D05923175D6C9900CA0F2E /* PPSpritesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSpritesheet.h; sourceTree = "<group>"; };
-		49D05924175D6C9900CA0F2E /* PPSpritesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSpritesheet.m; sourceTree = "<group>"; };
-		49D05926175D6CAD00CA0F2E /* PPTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTileset.h; sourceTree = "<group>"; };
-		49D05927175D6CAD00CA0F2E /* PPTileset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTileset.m; sourceTree = "<group>"; };
-		49D0592D175D6F3700CA0F2E /* PPSpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSpriteLayer.h; sourceTree = "<group>"; };
-		49D0592E175D6F3700CA0F2E /* PPSpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSpriteLayer.m; sourceTree = "<group>"; };
-		49D05930175D711000CA0F2E /* PPSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSprite.h; sourceTree = "<group>"; };
-		49D05931175D711000CA0F2E /* PPSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSprite.m; sourceTree = "<group>"; };
-		49D05933175D7B7E00CA0F2E /* ppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ppConstants.h; sourceTree = "<group>"; };
-		49D92C7C17628322004BE571 /* PPSpriteFrameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSpriteFrameInfo.h; sourceTree = "<group>"; };
-		49D92C7D17628322004BE571 /* PPSpriteFrameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSpriteFrameInfo.m; sourceTree = "<group>"; };
-		49D92C831762B27A004BE571 /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
-		49E6F659176651E200B8F20D /* PPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAnimation.h; sourceTree = "<group>"; };
-		49E6F65A176651E200B8F20D /* PPAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +101,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49357007176A820800D9F426 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				49356FE2176A819300D9F426 /* PPEngine.h */,
+				49356FE3176A819300D9F426 /* PPEngine.m */,
+				49357005176A819400D9F426 /* PPViewController.h */,
+				49357006176A819400D9F426 /* PPViewController.m */,
+				49356FD9176A819300D9F426 /* PPAnimation.h */,
+				49356FDA176A819300D9F426 /* PPAnimation.m */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		49357008176A822E00D9F426 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				49356FEC176A819300D9F426 /* PPObject.h */,
+				49356FED176A819300D9F426 /* PPObject.m */,
+				49356FFC176A819400D9F426 /* PPStageElement.h */,
+				49356FFD176A819400D9F426 /* PPStageElement.m */,
+				49356FDF176A819300D9F426 /* PPCamera.h */,
+				49356FE0176A819300D9F426 /* PPCamera.m */,
+				49356FF0176A819300D9F426 /* PPSprite.h */,
+				49356FF1176A819300D9F426 /* PPSprite.m */,
+				49356FF2176A819300D9F426 /* PPSpriteFrameInfo.h */,
+				49356FF3176A819300D9F426 /* PPSpriteFrameInfo.m */,
+				49356FFE176A819400D9F426 /* PPTextureAtlas.h */,
+				49356FFF176A819400D9F426 /* PPTextureAtlas.m */,
+				49356FF6176A819300D9F426 /* PPSpritesheet.h */,
+				49356FF7176A819300D9F426 /* PPSpritesheet.m */,
+				49357002176A819400D9F426 /* PPTileset.h */,
+				49357003176A819400D9F426 /* PPTileset.m */,
+				4935700B176A834900D9F426 /* PPTilemap.h */,
+				4935700C176A834900D9F426 /* PPTilemap.m */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		49357009176A823700D9F426 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				49356FE1176A819300D9F426 /* ppConstants.h */,
+				49357004176A819400D9F426 /* ppVectors.h */,
+				49356FE4176A819300D9F426 /* PPFileUtils.h */,
+				49356FE5176A819300D9F426 /* PPFileUtils.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		4935700A176A82BD00D9F426 /* Stage */ = {
+			isa = PBXGroup;
+			children = (
+				49356FF8176A819300D9F426 /* PPStage.h */,
+				49356FF9176A819400D9F426 /* PPStage.m */,
+				49356FE8176A819300D9F426 /* PPLayer.h */,
+				49356FE9176A819300D9F426 /* PPLayer.m */,
+				49356FF4176A819300D9F426 /* PPSpriteLayer.h */,
+				49356FF5176A819300D9F426 /* PPSpriteLayer.m */,
+				49357011176A838F00D9F426 /* PPTileLayer.h */,
+				49357012176A838F00D9F426 /* PPTileLayer.m */,
+			);
+			name = Stage;
+			sourceTree = "<group>";
+		};
 		49D058CE175D5D8400CA0F2E = {
 			isa = PBXGroup;
 			children = (
@@ -159,8 +208,15 @@
 		49D058E1175D5D8400CA0F2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				49D0591C175D678F00CA0F2E /* Spritesheets */,
-				49D0591B175D678000CA0F2E /* App */,
+				49356FCF176A817600D9F426 /* Default-568h@2x.png */,
+				49356FD0176A817600D9F426 /* Default.png */,
+				49356FD1176A817600D9F426 /* Default@2x.png */,
+				49356FD2176A817600D9F426 /* map.tmx */,
+				49356FD3176A817600D9F426 /* Pepper-Info.plist */,
+				49356FD4176A817600D9F426 /* test.plist */,
+				49356FD5176A817600D9F426 /* test.png */,
+				49356FD6176A817600D9F426 /* test.tps */,
+				49356FD7176A817600D9F426 /* tileset.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -192,94 +248,13 @@
 		49D05909175D5FE600CA0F2E /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				49D0590D175D60A900CA0F2E /* pepper.h */,
-				49D05929175D6E7D00CA0F2E /* Controller */,
-				49D0592A175D6E8C00CA0F2E /* Stage */,
-				49D0592B175D6EAB00CA0F2E /* Foundation */,
-				49D0592C175D6F1600CA0F2E /* Util */,
+				49356FD8176A819300D9F426 /* pepper.h */,
+				49357007176A820800D9F426 /* Engine */,
+				4935700A176A82BD00D9F426 /* Stage */,
+				49357008176A822E00D9F426 /* Foundation */,
+				49357009176A823700D9F426 /* Util */,
 			);
 			name = lib;
-			sourceTree = "<group>";
-		};
-		49D0591B175D678000CA0F2E /* App */ = {
-			isa = PBXGroup;
-			children = (
-				49D058F2175D5D8400CA0F2E /* MainStoryboard_iPhone.storyboard */,
-				49D058F5175D5D8400CA0F2E /* MainStoryboard_iPad.storyboard */,
-				49D058EC175D5D8400CA0F2E /* Default.png */,
-				49D058EE175D5D8400CA0F2E /* Default@2x.png */,
-				49D058F0175D5D8400CA0F2E /* Default-568h@2x.png */,
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
-		49D0591C175D678F00CA0F2E /* Spritesheets */ = {
-			isa = PBXGroup;
-			children = (
-				49D92C831762B27A004BE571 /* test.plist */,
-				49D0591E175D67A200CA0F2E /* test.png */,
-			);
-			name = Spritesheets;
-			sourceTree = "<group>";
-		};
-		49D05929175D6E7D00CA0F2E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				49D058F8175D5D8400CA0F2E /* PPViewController.h */,
-				49D058F9175D5D8400CA0F2E /* PPViewController.m */,
-				49E6F659176651E200B8F20D /* PPAnimation.h */,
-				49E6F65A176651E200B8F20D /* PPAnimation.m */,
-				49D0590A175D601400CA0F2E /* PPEngine.h */,
-				49D0590B175D601400CA0F2E /* PPEngine.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		49D0592A175D6E8C00CA0F2E /* Stage */ = {
-			isa = PBXGroup;
-			children = (
-				49D0590E175D614100CA0F2E /* PPStage.h */,
-				49D0590F175D614200CA0F2E /* PPStage.m */,
-				499A5C89175E8E6E000C811E /* PPStageElement.h */,
-				499A5C8A175E8E6E000C811E /* PPStageElement.m */,
-				49D05930175D711000CA0F2E /* PPSprite.h */,
-				49D05931175D711000CA0F2E /* PPSprite.m */,
-				49D05911175D625900CA0F2E /* PPLayer.h */,
-				49D05912175D625900CA0F2E /* PPLayer.m */,
-				49D0592D175D6F3700CA0F2E /* PPSpriteLayer.h */,
-				49D0592E175D6F3700CA0F2E /* PPSpriteLayer.m */,
-			);
-			name = Stage;
-			sourceTree = "<group>";
-		};
-		49D0592B175D6EAB00CA0F2E /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				49D05904175D5FB400CA0F2E /* PPObject.h */,
-				49D05905175D5FB400CA0F2E /* PPObject.m */,
-				49D05914175D632100CA0F2E /* PPTextureAtlas.h */,
-				49D05915175D632100CA0F2E /* PPTextureAtlas.m */,
-				49D92C7C17628322004BE571 /* PPSpriteFrameInfo.h */,
-				49D92C7D17628322004BE571 /* PPSpriteFrameInfo.m */,
-				49D05923175D6C9900CA0F2E /* PPSpritesheet.h */,
-				49D05924175D6C9900CA0F2E /* PPSpritesheet.m */,
-				49D05926175D6CAD00CA0F2E /* PPTileset.h */,
-				49D05927175D6CAD00CA0F2E /* PPTileset.m */,
-				4973F04617615DA600DAD940 /* PPCamera.h */,
-				4973F04717615DA600DAD940 /* PPCamera.m */,
-			);
-			name = Foundation;
-			sourceTree = "<group>";
-		};
-		49D0592C175D6F1600CA0F2E /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				49D05933175D7B7E00CA0F2E /* ppConstants.h */,
-				493441211769206600EE09EA /* ppVectors.h */,
-				49D05918175D659400CA0F2E /* PPFileUtils.h */,
-				49D05919175D659400CA0F2E /* PPFileUtils.m */,
-			);
-			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,13 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D058E5175D5D8400CA0F2E /* InfoPlist.strings in Resources */,
-				49D058ED175D5D8400CA0F2E /* Default.png in Resources */,
-				49D058EF175D5D8400CA0F2E /* Default@2x.png in Resources */,
-				49D058F1175D5D8400CA0F2E /* Default-568h@2x.png in Resources */,
-				49D058F4175D5D8400CA0F2E /* MainStoryboard_iPhone.storyboard in Resources */,
-				49D058F7175D5D8400CA0F2E /* MainStoryboard_iPad.storyboard in Resources */,
-				49D05920175D67A200CA0F2E /* test.png in Resources */,
-				49D92C841762B27A004BE571 /* test.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,23 +340,9 @@
 			files = (
 				49D058E7175D5D8400CA0F2E /* main.m in Sources */,
 				49D058EB175D5D8400CA0F2E /* AppDelegate.m in Sources */,
-				49D058FA175D5D8400CA0F2E /* PPViewController.m in Sources */,
-				49D05906175D5FB500CA0F2E /* PPObject.m in Sources */,
-				49D0590C175D601400CA0F2E /* PPEngine.m in Sources */,
-				49D05910175D614200CA0F2E /* PPStage.m in Sources */,
-				49D05913175D625900CA0F2E /* PPLayer.m in Sources */,
-				49D05916175D632100CA0F2E /* PPTextureAtlas.m in Sources */,
-				49D0591A175D659400CA0F2E /* PPFileUtils.m in Sources */,
-				49D05925175D6C9900CA0F2E /* PPSpritesheet.m in Sources */,
-				49D05928175D6CAE00CA0F2E /* PPTileset.m in Sources */,
-				49D0592F175D6F3700CA0F2E /* PPSpriteLayer.m in Sources */,
-				49D05932175D711100CA0F2E /* PPSprite.m in Sources */,
-				499A5C8B175E8E6F000C811E /* PPStageElement.m in Sources */,
 				499A5C8E175E8FBD000C811E /* TestStage.m in Sources */,
-				4973F04817615DA600DAD940 /* PPCamera.m in Sources */,
 				4973F04B1761615F00DAD940 /* ViewController.m in Sources */,
-				49D92C7E17628322004BE571 /* PPSpriteFrameInfo.m in Sources */,
-				49E6F65B176651E200B8F20D /* PPAnimation.m in Sources */,
+				4935700D176A834900D9F426 /* PPTilemap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,22 +355,6 @@
 				49D058E4175D5D8400CA0F2E /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		49D058F2175D5D8400CA0F2E /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49D058F3175D5D8400CA0F2E /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		49D058F5175D5D8400CA0F2E /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49D058F6175D5D8400CA0F2E /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

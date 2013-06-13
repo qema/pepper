@@ -13,7 +13,9 @@
 
 -(id)initWithFile:(NSString *)filename scale:(float)scale
 {
-    if (self=[super initWithFile:filename scale:scale]) {
+    if (self=[super init]) {
+        self.scale = scale;
+        
         NSDictionary *spritesheetData = [NSDictionary dictionaryWithContentsOfFile:[PPFileUtils fullPath:filename]];
         [self processData:spritesheetData];
         NSError *error;
@@ -54,10 +56,11 @@
     CGRect rect = frameInfo.bounds;
     rect.size = [frameInfo sizeInTexture];
     Quad q;
-    CGPoint topLeft = CGPointMake(rect.origin.x, rect.origin.y);
-    CGPoint bottomLeft = CGPointMake(rect.origin.x, rect.origin.y+rect.size.height);
-    CGPoint bottomRight = CGPointMake(rect.origin.x+rect.size.width, rect.origin.y+rect.size.height);
-    CGPoint topRight = CGPointMake(rect.origin.x+rect.size.width, rect.origin.y);
+    // "squeeze" quad to fix GL precision errors
+    CGPoint topLeft = CGPointMake(rect.origin.x+0.25f, rect.origin.y+0.25f);
+    CGPoint bottomLeft = CGPointMake(rect.origin.x+0.25f, rect.origin.y+rect.size.height+0.25f);
+    CGPoint bottomRight = CGPointMake(rect.origin.x+rect.size.width-0.25f, rect.origin.y+rect.size.height-0.25f);
+    CGPoint topRight = CGPointMake(rect.origin.x+rect.size.width-0.25f, rect.origin.y+0.25f);
     
     if (frameInfo.isFlipped) {
         q.x1 = topRight.x; q.y1 = topRight.y;

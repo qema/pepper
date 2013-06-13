@@ -11,11 +11,11 @@
 
 @implementation PPTextureAtlas
 
--(id)initWithFile:(NSString *)filename scale:(float)scale
+-(id)init
 {
     if (self=[super init]) {
         _frames = [[NSMutableDictionary alloc] initWithCapacity:PP_TEXTURE_ATLAS_INITIAL_CAPACITY];
-        _scale = scale;
+        //_scale = scale;
     }
     return self;
 }

@@ -36,7 +36,7 @@
 
 -(GLKMatrix4)projectionMatrix
 {
-    return GLKMatrix4MakeOrtho(self.frame.origin.x, self.frame.origin.x+self.frame.size.width, self.frame.origin.y+self.frame.size.height, self.frame.origin.y, 1, -1);
+    return GLKMatrix4MakeOrtho(self.frame.origin.x, self.frame.origin.x+self.frame.size.width, self.frame.origin.y+self.frame.size.height, self.frame.origin.y, -1, 1);
 }
 
 -(CGSize)size

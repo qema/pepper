@@ -20,10 +20,4 @@
 @property (nonatomic) CGSize textureSize;
 @property (nonatomic) float scale;
 
-/** @name Initializing */
-/** Initialize with info file
- @param filename The file to use; file must be in TexturePacker cocos2d plist format
- @param scale Scale the image is stretched to; for retina images, scale should be 2.0, and 1.0 for non-retina
- */
--(id)initWithFile:(NSString *)filename scale:(float)scale;
 @end
