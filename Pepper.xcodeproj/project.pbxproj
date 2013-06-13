@@ -7,7 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4935700D176A834900D9F426 /* PPTilemap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4935700C176A834900D9F426 /* PPTilemap.m */; };
+		49357018176A841600D9F426 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49357017176A841600D9F426 /* Default-568h@2x.png */; };
+		49357040176A84EF00D9F426 /* PPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FE3176A819300D9F426 /* PPEngine.m */; };
+		49357041176A84EF00D9F426 /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49357006176A819400D9F426 /* PPViewController.m */; };
+		49357042176A84EF00D9F426 /* PPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FDA176A819300D9F426 /* PPAnimation.m */; };
+		49357043176A84EF00D9F426 /* PPStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FF9176A819400D9F426 /* PPStage.m */; };
+		49357044176A84EF00D9F426 /* PPLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FE9176A819300D9F426 /* PPLayer.m */; };
+		49357045176A84EF00D9F426 /* PPSpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FF5176A819300D9F426 /* PPSpriteLayer.m */; };
+		49357046176A84EF00D9F426 /* PPTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49357012176A838F00D9F426 /* PPTileLayer.m */; };
+		49357047176A84EF00D9F426 /* PPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FED176A819300D9F426 /* PPObject.m */; };
+		49357048176A84EF00D9F426 /* PPStageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FFD176A819400D9F426 /* PPStageElement.m */; };
+		49357049176A84EF00D9F426 /* PPCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FE0176A819300D9F426 /* PPCamera.m */; };
+		4935704A176A84EF00D9F426 /* PPSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FF1176A819300D9F426 /* PPSprite.m */; };
+		4935704B176A84EF00D9F426 /* PPSpriteFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FF3176A819300D9F426 /* PPSpriteFrameInfo.m */; };
+		4935704C176A84EF00D9F426 /* PPTextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FFF176A819400D9F426 /* PPTextureAtlas.m */; };
+		4935704D176A84EF00D9F426 /* PPSpritesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FF7176A819300D9F426 /* PPSpritesheet.m */; };
+		4935704E176A84EF00D9F426 /* PPTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = 49357003176A819400D9F426 /* PPTileset.m */; };
+		4935704F176A84EF00D9F426 /* PPTilemap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4935700C176A834900D9F426 /* PPTilemap.m */; };
+		49357050176A84EF00D9F426 /* PPFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FE5176A819300D9F426 /* PPFileUtils.m */; };
 		4973F04B1761615F00DAD940 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973F04A1761615F00DAD940 /* ViewController.m */; };
 		499A5C8E175E8FBD000C811E /* TestStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 499A5C8D175E8FBD000C811E /* TestStage.m */; };
 		49D058DB175D5D8400CA0F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D058DA175D5D8400CA0F2E /* UIKit.framework */; };
@@ -21,11 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49356FCF176A817600D9F426 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		49356FD0176A817600D9F426 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		49356FD1176A817600D9F426 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		49356FD2176A817600D9F426 /* map.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = map.tmx; path = Resources/map.tmx; sourceTree = "<group>"; };
-		49356FD3176A817600D9F426 /* Pepper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pepper-Info.plist"; path = "Resources/Pepper-Info.plist"; sourceTree = "<group>"; };
 		49356FD4176A817600D9F426 /* test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = test.plist; path = Resources/test.plist; sourceTree = "<group>"; };
 		49356FD5176A817600D9F426 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = Resources/test.png; sourceTree = "<group>"; };
 		49356FD6176A817600D9F426 /* test.tps */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.tps; path = Resources/test.tps; sourceTree = "<group>"; };
@@ -67,6 +82,7 @@
 		4935700C176A834900D9F426 /* PPTilemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPTilemap.m; path = lib/PPTilemap.m; sourceTree = "<group>"; };
 		49357011176A838F00D9F426 /* PPTileLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPTileLayer.h; path = lib/PPTileLayer.h; sourceTree = "<group>"; };
 		49357012176A838F00D9F426 /* PPTileLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPTileLayer.m; path = lib/PPTileLayer.m; sourceTree = "<group>"; };
+		49357017176A841600D9F426 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		4973F0491761615F00DAD940 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4973F04A1761615F00DAD940 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		499A5C8C175E8FBD000C811E /* TestStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestStage.h; sourceTree = "<group>"; };
@@ -208,11 +224,10 @@
 		49D058E1175D5D8400CA0F2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				49356FCF176A817600D9F426 /* Default-568h@2x.png */,
+				49357017176A841600D9F426 /* Default-568h@2x.png */,
 				49356FD0176A817600D9F426 /* Default.png */,
 				49356FD1176A817600D9F426 /* Default@2x.png */,
 				49356FD2176A817600D9F426 /* map.tmx */,
-				49356FD3176A817600D9F426 /* Pepper-Info.plist */,
 				49356FD4176A817600D9F426 /* test.plist */,
 				49356FD5176A817600D9F426 /* test.png */,
 				49356FD6176A817600D9F426 /* test.tps */,
@@ -328,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D058E5175D5D8400CA0F2E /* InfoPlist.strings in Resources */,
+				49357018176A841600D9F426 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,11 +354,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49357040176A84EF00D9F426 /* PPEngine.m in Sources */,
+				49357041176A84EF00D9F426 /* PPViewController.m in Sources */,
+				49357042176A84EF00D9F426 /* PPAnimation.m in Sources */,
+				49357043176A84EF00D9F426 /* PPStage.m in Sources */,
+				49357044176A84EF00D9F426 /* PPLayer.m in Sources */,
+				49357045176A84EF00D9F426 /* PPSpriteLayer.m in Sources */,
+				49357046176A84EF00D9F426 /* PPTileLayer.m in Sources */,
+				49357047176A84EF00D9F426 /* PPObject.m in Sources */,
+				49357048176A84EF00D9F426 /* PPStageElement.m in Sources */,
+				49357049176A84EF00D9F426 /* PPCamera.m in Sources */,
+				4935704A176A84EF00D9F426 /* PPSprite.m in Sources */,
+				4935704B176A84EF00D9F426 /* PPSpriteFrameInfo.m in Sources */,
+				4935704C176A84EF00D9F426 /* PPTextureAtlas.m in Sources */,
+				4935704D176A84EF00D9F426 /* PPSpritesheet.m in Sources */,
+				4935704E176A84EF00D9F426 /* PPTileset.m in Sources */,
+				4935704F176A84EF00D9F426 /* PPTilemap.m in Sources */,
+				49357050176A84EF00D9F426 /* PPFileUtils.m in Sources */,
 				49D058E7175D5D8400CA0F2E /* main.m in Sources */,
 				49D058EB175D5D8400CA0F2E /* AppDelegate.m in Sources */,
 				499A5C8E175E8FBD000C811E /* TestStage.m in Sources */,
 				4973F04B1761615F00DAD940 /* ViewController.m in Sources */,
-				4935700D176A834900D9F426 /* PPTilemap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

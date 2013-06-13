@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Andrew Wang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "PPLayer.h"
 
 @interface PPTileLayer : PPLayer
 
