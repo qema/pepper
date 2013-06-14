@@ -8,14 +8,15 @@
 
 #import "PPTextureAtlas.h"
 #import "ppConstants.h"
+#import "ppTypes.h"
 
 @implementation PPTextureAtlas
 
--(id)init
+-(id)initWithScale:(float)scale
 {
     if (self=[super init]) {
         _frames = [[NSMutableDictionary alloc] initWithCapacity:PP_TEXTURE_ATLAS_INITIAL_CAPACITY];
-        //_scale = scale;
+        _scale = scale;
     }
     return self;
 }

@@ -13,9 +13,7 @@
 
 -(id)initWithFile:(NSString *)filename scale:(float)scale
 {
-    if (self=[super init]) {
-        self.scale = scale;
-        
+    if (self=[super initWithScale:scale]) {
         NSDictionary *spritesheetData = [NSDictionary dictionaryWithContentsOfFile:[PPFileUtils fullPath:filename]];
         [self processData:spritesheetData];
         NSError *error;

@@ -23,8 +23,19 @@
 		4935704C176A84EF00D9F426 /* PPTextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FFF176A819400D9F426 /* PPTextureAtlas.m */; };
 		4935704D176A84EF00D9F426 /* PPSpritesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FF7176A819300D9F426 /* PPSpritesheet.m */; };
 		4935704E176A84EF00D9F426 /* PPTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = 49357003176A819400D9F426 /* PPTileset.m */; };
-		4935704F176A84EF00D9F426 /* PPTilemap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4935700C176A834900D9F426 /* PPTilemap.m */; };
+		4935704F176A84EF00D9F426 /* PPTMXTileGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4935700C176A834900D9F426 /* PPTMXTileGroup.m */; };
 		49357050176A84EF00D9F426 /* PPFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 49356FE5176A819300D9F426 /* PPFileUtils.m */; };
+		49357052176A89E100D9F426 /* map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 49357051176A89E100D9F426 /* map.tmx */; };
+		49357054176A8B6E00D9F426 /* tileset.tsx in Resources */ = {isa = PBXBuildFile; fileRef = 49357053176A8B6E00D9F426 /* tileset.tsx */; };
+		49357056176A92D500D9F426 /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = 49357055176A92D500D9F426 /* tileset.png */; };
+		4949290E176AA5F300144E02 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4949290D176AA5F300144E02 /* NSData+Base64.m */; };
+		49492913176AAA3800144E02 /* PPTMXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49492912176AAA3800144E02 /* PPTMXParser.m */; };
+		49492918176AD32100144E02 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49492914176AD32100144E02 /* MainStoryboard_iPad.storyboard */; };
+		49492919176AD32100144E02 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49492916176AD32100144E02 /* MainStoryboard_iPhone.storyboard */; };
+		4949291C176AD32600144E02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4949291A176AD32600144E02 /* InfoPlist.strings */; };
+		4949291F176AD36F00144E02 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4949291D176AD36F00144E02 /* test.plist */; };
+		49492920176AD36F00144E02 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 4949291E176AD36F00144E02 /* test.png */; };
+		496A9D99176B8E440028B99D /* PPTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 496A9D98176B8E440028B99D /* PPTileMap.m */; };
 		4973F04B1761615F00DAD940 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973F04A1761615F00DAD940 /* ViewController.m */; };
 		499A5C8E175E8FBD000C811E /* TestStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 499A5C8D175E8FBD000C811E /* TestStage.m */; };
 		49D058DB175D5D8400CA0F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D058DA175D5D8400CA0F2E /* UIKit.framework */; };
@@ -40,11 +51,6 @@
 /* Begin PBXFileReference section */
 		49356FD0176A817600D9F426 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		49356FD1176A817600D9F426 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
-		49356FD2176A817600D9F426 /* map.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = map.tmx; path = Resources/map.tmx; sourceTree = "<group>"; };
-		49356FD4176A817600D9F426 /* test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = test.plist; path = Resources/test.plist; sourceTree = "<group>"; };
-		49356FD5176A817600D9F426 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = Resources/test.png; sourceTree = "<group>"; };
-		49356FD6176A817600D9F426 /* test.tps */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.tps; path = Resources/test.tps; sourceTree = "<group>"; };
-		49356FD7176A817600D9F426 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tileset.png; path = Resources/tileset.png; sourceTree = "<group>"; };
 		49356FD8176A819300D9F426 /* pepper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pepper.h; path = lib/pepper.h; sourceTree = "<group>"; };
 		49356FD9176A819300D9F426 /* PPAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPAnimation.h; path = lib/PPAnimation.h; sourceTree = "<group>"; };
 		49356FDA176A819300D9F426 /* PPAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPAnimation.m; path = lib/PPAnimation.m; sourceTree = "<group>"; };
@@ -75,14 +81,29 @@
 		49356FFF176A819400D9F426 /* PPTextureAtlas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPTextureAtlas.m; path = lib/PPTextureAtlas.m; sourceTree = "<group>"; };
 		49357002176A819400D9F426 /* PPTileset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPTileset.h; path = lib/PPTileset.h; sourceTree = "<group>"; };
 		49357003176A819400D9F426 /* PPTileset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPTileset.m; path = lib/PPTileset.m; sourceTree = "<group>"; };
-		49357004176A819400D9F426 /* ppVectors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ppVectors.h; path = lib/ppVectors.h; sourceTree = "<group>"; };
+		49357004176A819400D9F426 /* ppMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ppMath.h; path = lib/ppMath.h; sourceTree = "<group>"; };
 		49357005176A819400D9F426 /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPViewController.h; path = lib/PPViewController.h; sourceTree = "<group>"; };
 		49357006176A819400D9F426 /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPViewController.m; path = lib/PPViewController.m; sourceTree = "<group>"; };
-		4935700B176A834900D9F426 /* PPTilemap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPTilemap.h; path = lib/PPTilemap.h; sourceTree = "<group>"; };
-		4935700C176A834900D9F426 /* PPTilemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPTilemap.m; path = lib/PPTilemap.m; sourceTree = "<group>"; };
+		4935700B176A834900D9F426 /* PPTMXTileGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPTMXTileGroup.h; path = lib/PPTMXTileGroup.h; sourceTree = "<group>"; };
+		4935700C176A834900D9F426 /* PPTMXTileGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPTMXTileGroup.m; path = lib/PPTMXTileGroup.m; sourceTree = "<group>"; };
 		49357011176A838F00D9F426 /* PPTileLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPTileLayer.h; path = lib/PPTileLayer.h; sourceTree = "<group>"; };
 		49357012176A838F00D9F426 /* PPTileLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PPTileLayer.m; path = lib/PPTileLayer.m; sourceTree = "<group>"; };
 		49357017176A841600D9F426 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		49357051176A89E100D9F426 /* map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = map.tmx; path = Resources/map.tmx; sourceTree = "<group>"; };
+		49357053176A8B6E00D9F426 /* tileset.tsx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = tileset.tsx; path = Resources/tileset.tsx; sourceTree = "<group>"; };
+		49357055176A92D500D9F426 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tileset.png; path = Resources/tileset.png; sourceTree = "<group>"; };
+		49357057176A933400D9F426 /* ppTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ppTypes.h; path = lib/ppTypes.h; sourceTree = "<group>"; };
+		4949290C176AA5F300144E02 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "lib/NSData+Base64.h"; sourceTree = "<group>"; };
+		4949290D176AA5F300144E02 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "lib/NSData+Base64.m"; sourceTree = "<group>"; };
+		49492911176AAA3800144E02 /* PPTMXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPTMXParser.h; path = lib/PPTMXParser.h; sourceTree = "<group>"; };
+		49492912176AAA3800144E02 /* PPTMXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPTMXParser.m; path = lib/PPTMXParser.m; sourceTree = "<group>"; };
+		49492915176AD32100144E02 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		49492917176AD32100144E02 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		4949291B176AD32600144E02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4949291D176AD36F00144E02 /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = test.plist; path = Resources/test.plist; sourceTree = "<group>"; };
+		4949291E176AD36F00144E02 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = Resources/test.png; sourceTree = "<group>"; };
+		496A9D97176B8E440028B99D /* PPTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTileMap.h; sourceTree = "<group>"; };
+		496A9D98176B8E440028B99D /* PPTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTileMap.m; sourceTree = "<group>"; };
 		4973F0491761615F00DAD940 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4973F04A1761615F00DAD940 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		499A5C8C175E8FBD000C811E /* TestStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestStage.h; sourceTree = "<group>"; };
@@ -149,8 +170,12 @@
 				49356FF7176A819300D9F426 /* PPSpritesheet.m */,
 				49357002176A819400D9F426 /* PPTileset.h */,
 				49357003176A819400D9F426 /* PPTileset.m */,
-				4935700B176A834900D9F426 /* PPTilemap.h */,
-				4935700C176A834900D9F426 /* PPTilemap.m */,
+				4935700B176A834900D9F426 /* PPTMXTileGroup.h */,
+				4935700C176A834900D9F426 /* PPTMXTileGroup.m */,
+				496A9D97176B8E440028B99D /* PPTileMap.h */,
+				496A9D98176B8E440028B99D /* PPTileMap.m */,
+				49492911176AAA3800144E02 /* PPTMXParser.h */,
+				49492912176AAA3800144E02 /* PPTMXParser.m */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -158,8 +183,11 @@
 		49357009176A823700D9F426 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				4949290C176AA5F300144E02 /* NSData+Base64.h */,
+				4949290D176AA5F300144E02 /* NSData+Base64.m */,
 				49356FE1176A819300D9F426 /* ppConstants.h */,
-				49357004176A819400D9F426 /* ppVectors.h */,
+				49357057176A933400D9F426 /* ppTypes.h */,
+				49357004176A819400D9F426 /* ppMath.h */,
 				49356FE4176A819300D9F426 /* PPFileUtils.h */,
 				49356FE5176A819300D9F426 /* PPFileUtils.m */,
 			);
@@ -224,14 +252,17 @@
 		49D058E1175D5D8400CA0F2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				49492914176AD32100144E02 /* MainStoryboard_iPad.storyboard */,
+				49492916176AD32100144E02 /* MainStoryboard_iPhone.storyboard */,
+				4949291A176AD32600144E02 /* InfoPlist.strings */,
 				49357017176A841600D9F426 /* Default-568h@2x.png */,
 				49356FD0176A817600D9F426 /* Default.png */,
 				49356FD1176A817600D9F426 /* Default@2x.png */,
-				49356FD2176A817600D9F426 /* map.tmx */,
-				49356FD4176A817600D9F426 /* test.plist */,
-				49356FD5176A817600D9F426 /* test.png */,
-				49356FD6176A817600D9F426 /* test.tps */,
-				49356FD7176A817600D9F426 /* tileset.png */,
+				4949291D176AD36F00144E02 /* test.plist */,
+				4949291E176AD36F00144E02 /* test.png */,
+				49357051176A89E100D9F426 /* map.tmx */,
+				49357053176A8B6E00D9F426 /* tileset.tsx */,
+				49357055176A92D500D9F426 /* tileset.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -344,6 +375,14 @@
 			files = (
 				49D058E5175D5D8400CA0F2E /* InfoPlist.strings in Resources */,
 				49357018176A841600D9F426 /* Default-568h@2x.png in Resources */,
+				49357052176A89E100D9F426 /* map.tmx in Resources */,
+				49357054176A8B6E00D9F426 /* tileset.tsx in Resources */,
+				49357056176A92D500D9F426 /* tileset.png in Resources */,
+				49492918176AD32100144E02 /* MainStoryboard_iPad.storyboard in Resources */,
+				49492919176AD32100144E02 /* MainStoryboard_iPhone.storyboard in Resources */,
+				4949291C176AD32600144E02 /* InfoPlist.strings in Resources */,
+				4949291F176AD36F00144E02 /* test.plist in Resources */,
+				49492920176AD36F00144E02 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,18 +408,45 @@
 				4935704C176A84EF00D9F426 /* PPTextureAtlas.m in Sources */,
 				4935704D176A84EF00D9F426 /* PPSpritesheet.m in Sources */,
 				4935704E176A84EF00D9F426 /* PPTileset.m in Sources */,
-				4935704F176A84EF00D9F426 /* PPTilemap.m in Sources */,
+				4935704F176A84EF00D9F426 /* PPTMXTileGroup.m in Sources */,
 				49357050176A84EF00D9F426 /* PPFileUtils.m in Sources */,
 				49D058E7175D5D8400CA0F2E /* main.m in Sources */,
 				49D058EB175D5D8400CA0F2E /* AppDelegate.m in Sources */,
 				499A5C8E175E8FBD000C811E /* TestStage.m in Sources */,
 				4973F04B1761615F00DAD940 /* ViewController.m in Sources */,
+				4949290E176AA5F300144E02 /* NSData+Base64.m in Sources */,
+				49492913176AAA3800144E02 /* PPTMXParser.m in Sources */,
+				496A9D99176B8E440028B99D /* PPTileMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		49492914176AD32100144E02 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49492915176AD32100144E02 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		49492916176AD32100144E02 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49492917176AD32100144E02 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		4949291A176AD32600144E02 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4949291B176AD32600144E02 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		49D058E3175D5D8400CA0F2E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

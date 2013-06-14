@@ -7,8 +7,24 @@
 //
 
 #import "PPTextureAtlas.h"
+#import "ppTypes.h"
 
-/** TO BE IMPLEMENTED!! */
-@interface PPTileset : PPTextureAtlas
+/** Tileset that stores tile info/properties and gives tile quads */
+@interface PPTileset : PPTextureAtlas <NSXMLParserDelegate>
+{
+    NSDictionary *tilesetDict;
+    int firstGID;
+}
 
+/** Size of each tile */
+@property (nonatomic) CGSize tileSize;
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic) float spacing;
+@property (nonatomic) float margin;
+
+-(id)initWithImageFile:(NSString *)file properties:(NSDictionary *)dict scale:(float)scale;
+
+-(Quad)quadForTile:(int)tileID;
+-(Quad)normalizedQuadForTile:(int)tileID;
+-(NSDictionary *)propertiesForTile:(int)tileID;
 @end

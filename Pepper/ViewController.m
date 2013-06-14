@@ -29,4 +29,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    start = self.engine.stage.camera.position;
+    startTouchPos = [touch locationInView:self.view];
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    self.engine.stage.camera.position = CGPointSub(start, CGPointDiv(CGPointSub([touch locationInView:self.view],startTouchPos),self.engine.stage.camera.scale.x));
+}
+
 @end

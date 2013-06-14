@@ -48,8 +48,9 @@
 
 -(CGSize)size
 {
-    NSLog(@"forgot to implement size!!");
-    return CGSizeZero;
+    CGSize originalSize = [self sizeBeforeTransformations];
+    CGSize currentSize = CGSizeMake(originalSize.width * self.scale.x, originalSize.height * self.scale.y);
+    return currentSize;
 }
 
 -(CGSize)sizeBeforeTransformations

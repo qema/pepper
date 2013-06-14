@@ -7,7 +7,6 @@
 //
 
 #import "PPFileUtils.h"
-#import "PPStageElement.h"
 #import <GLKit/GLKit.h>
 
 /** Stores a texture and an "atlas" of frames which are assigned to names. Thus you can access a certain rectangle (i.e. location of a sprite or tile in a spritesheet/tileset) by its name. */
@@ -20,4 +19,5 @@
 @property (nonatomic) CGSize textureSize;
 @property (nonatomic) float scale;
 
+-(id)initWithScale:(float)scale;
 @end

@@ -11,6 +11,8 @@
 /** test */
 @interface TestStage : PPStage
 {
+    PPTileLayer *tileLayer;
+    PPTileMap *tileMap;
     PPSpritesheet *spritesheet;
     PPSpriteLayer *spriteLayer;
     PPSprite *sprite;

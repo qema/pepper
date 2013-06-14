@@ -9,5 +9,7 @@
 #import "pepper.h"
 
 @interface ViewController : PPViewController
-
+{
+    CGPoint start,startTouchPos;
+}
 @end

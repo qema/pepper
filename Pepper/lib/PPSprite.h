@@ -8,6 +8,7 @@
 
 #import "PPStageElement.h"
 #import "PPSpriteFrameInfo.h"
+#import "ppTypes.h"
 
 /** Info for a single sprite entity. Does not draw itself; drawing is handled by its parent PPSpriteLayer
  */
@@ -37,8 +38,6 @@
 -(CGRect)bounds;
 /** Get unadjusted size */
 -(CGSize)sizeBeforeTransformations;
-/** Get size of sprite */
--(CGSize)size;
 /** Check collision with other sprite 
  @param sprite Name of sprite to check against */
 -(BOOL)collidesWithSprite:(PPSprite *)sprite;

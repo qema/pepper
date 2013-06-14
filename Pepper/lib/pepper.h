@@ -10,7 +10,7 @@
 #define Pepper_Pepper_h
 
 #import "ppConstants.h"
-#import "ppVectors.h"
+#import "ppMath.h"
 #import "PPObject.h"
 #import "PPViewController.h"
 #import "PPEngine.h"
@@ -23,6 +23,9 @@
 #import "PPSpriteFrameInfo.h"
 #import "PPSpritesheet.h"
 #import "PPTileset.h"
+#import "PPTileMap.h"
+#import "PPTMXTileGroup.h"
+#import "PPTileLayer.h"
 #import "PPCamera.h"
 #import "PPFileUtils.h"
 

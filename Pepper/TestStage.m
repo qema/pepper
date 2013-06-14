@@ -28,6 +28,13 @@
       [PPAnimationFrameTo frameToWithSprite:sprite destFrame:[spritesheet frameInfoForName:@"player-r"] duration:0],nil] repeat:YES];
     newSprite = [spritesheet createSpriteWithFrame:@"player-d" position:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
     [spriteLayer addSprite:newSprite];
+    
+    tileMap = [[PPTileMap alloc] initWithFile:@"map.tmx" tilesetScale:0.5];
+    tileLayer = [[PPTileLayer alloc] initWithFrame:self.frame tileMap:tileMap];
+    [self addLayer:tileLayer];
+    //tileMap = [[PPTileMap alloc] initWithMapFile:@"map.tmx" tilesetScale:0.5];
+    //tileLayer = [[PPTileLayer alloc] initWithFrame:self.frame tileMap:tileMap];
+    //[self addLayer:tileLayer];
 }
 
 -(void)update:(float)delta

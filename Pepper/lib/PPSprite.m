@@ -58,13 +58,6 @@
     return CGSizeMake(size.width / self.frameInfo.scale, size.height / self.frameInfo.scale);
 }
 
--(CGSize)size
-{
-    CGSize originalSize = [self sizeBeforeTransformations];
-    CGSize spriteSize = CGSizeMake(originalSize.width * self.scale.x, originalSize.height * self.scale.y);
-    return spriteSize;
-}
-
 -(BOOL)collidesWithSprite:(PPSprite *)sprite
 {
     if (CGRectIntersectsRect([self bounds], [sprite bounds]))
