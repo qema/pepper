@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
     
+    // setup viewcontroller properties
+    self.preferredFramesPerSecond = 60;
+    
     // init GL context
     glContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     GLKView *view = [[GLKView alloc] initWithFrame:self.view.frame context:glContext];

@@ -12,9 +12,9 @@
 /** Loads and draws a tilemap and tileset */
 @interface PPTMXTileGroup : PPObject <NSXMLParserDelegate>
 {
-    unsigned int *mapData;
+    NSData *mapData;
+    unsigned int *mapTile;
     Quad *tileQuad,*textureQuad;
-    int numberOfQuads;
     BOOL shouldSwapBytesToCorrectEndianness;
 }
 
@@ -25,10 +25,12 @@
 /** Tile size in world coords */
 @property (nonatomic) CGSize tileSize;
 
+@property (nonatomic) int numberOfQuads;
+
 -(id)initWithDictionary:(NSDictionary *)dict tileset:(PPTileset *)tileset;
 
 -(Quad *)quads;
+-(Quad *)textureQuads;
 
--(void)draw;
 -(unsigned int)tileAtMapCoords:(CGPoint)coords;
 @end

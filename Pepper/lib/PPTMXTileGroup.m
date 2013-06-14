@@ -20,15 +20,15 @@
         int wid = [[dict objectForKey:@"width"] intValue];
         int hei = [[dict objectForKey:@"height"] intValue];
         self.mapSize = CGSizeMake(wid, hei);
-        NSData *dat = [dict objectForKey:@"data"];
-        mapData = (unsigned int *)[dat bytes];
+        mapData = [[dict objectForKey:@"data"] copy];
+        mapTile = (unsigned int *)[mapData bytes];
         
         _tileset = tileset;
         _tileSize = CGSizeMake(self.tileset.tileSize.width/self.tileset.scale,self.tileset.tileSize.height/self.tileset.scale);
         
-        numberOfQuads = (self.mapSize.width)*(self.mapSize.height);
-        tileQuad = malloc(sizeof(Quad)*numberOfQuads);
-        textureQuad = malloc(sizeof(Quad)*numberOfQuads);
+        _numberOfQuads = (self.mapSize.width)*(self.mapSize.height);
+        tileQuad = malloc(sizeof(Quad)*_numberOfQuads);
+        textureQuad = malloc(sizeof(Quad)*_numberOfQuads);
         
         wid=self.mapSize.width;
         hei=self.mapSize.height;
@@ -70,32 +70,19 @@
 -(unsigned int)tileAtMapCoords:(CGPoint)coords
 {
     int x=coords.x,y=coords.y;
-    unsigned int dat = mapData[y*(int)self.mapSize.width+x];
+    unsigned int dat = mapTile[y*(int)self.mapSize.width+x];
     if (shouldSwapBytesToCorrectEndianness) dat = CFSwapInt32(dat);
     return dat;
-}
-
--(void)draw
-{
-    int maxWid=self.mapSize.width,maxHei = self.mapSize.height;
-    for (int x=0;x<maxWid;x++) {
-        for (int y=0;y<maxHei;y++) {
-            int i=y*maxWid+x;
-            CGPoint coords = CGPointMake(x, y);
-            if ([self tileAtMapCoords:coords] > 0) {
-                glEnableVertexAttribArray(GLKVertexAttribPosition);
-                glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0,&tileQuad[i]);
-                glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
-                glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0,&textureQuad[i]);
-                glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
-            }
-        }
-    }
 }
 
 -(Quad *)quads
 {
     return tileQuad;
+}
+
+-(Quad *)textureQuads
+{
+    return textureQuad;
 }
 
 -(CGSize)sizeBeforeTransformations
