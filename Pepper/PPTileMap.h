@@ -18,5 +18,6 @@
 
 @property (nonatomic,retain) NSMutableArray *layers;
 @property (nonatomic,retain) PPTileset *tileset;
+
 -(id)initWithFile:(NSString *)file tilesetScale:(float)scale;
 @end

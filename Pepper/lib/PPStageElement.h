@@ -14,6 +14,7 @@
 @property (nonatomic) CGPoint scale;
 @property (nonatomic) float rotation;
 @property (nonatomic) CGPoint anchor;   // (0,0) is top left corner, (1,1) is bottom right
+@property (nonatomic) CGRect bounds;
 
 -(id)initWithPosition:(CGPoint)position;
 -(id)initWithPosition:(CGPoint)position scale:(CGPoint)scale;

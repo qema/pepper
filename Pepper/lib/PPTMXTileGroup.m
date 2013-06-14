@@ -54,6 +54,11 @@
     return CGPointMake(coords.x/self.tileSize.width, coords.y/self.tileSize.height);
 }
 
+-(CGPoint)mapToWorldCoords:(CGPoint)coords
+{
+    return CGPointMake(coords.x*self.tileSize.width, coords.y*self.tileSize.height);
+}
+
 -(Quad)quadForTileAtMapCoords:(CGPoint)coords
 {
     int x=coords.x,y=coords.y;

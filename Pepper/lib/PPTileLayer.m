@@ -23,11 +23,19 @@
 
 -(void)draw
 {
-    [super draw]; //CGRectMake(self.position.x-self.anchor.x*size.width, self.position.y-self.anchor.y*size.height, size.width, size.height);
+    [super draw];
+    CGRect rect=self.drawRect;
+    if (!rect.size.width) {
+        rect = CGRectMake(0, 0, self.tileMap.size.width, self.tileMap.size.height);
+    }
     for (PPTMXTileGroup *layer in self.tileMap.layers) {
+        CGPoint start=[layer worldToMapCoords:rect.origin];
+        int wid=ceil(rect.size.width/layer.tileSize.width);
+        int hei=ceil(rect.size.height/layer.tileSize.height);
+        int startx=start.x,starty=start.y;
         int maxWid=layer.mapSize.width,maxHei = layer.mapSize.height;
-        for (int x=0;x<maxWid;x++) {
-            for (int y=0;y<maxHei;y++) {
+        for (int x=MAX(startx-1,0);x<MIN(startx+wid+1,maxWid);x++) {
+            for (int y=MAX(starty-1,0);y<MIN(starty+hei+1,maxHei);y++) {
                 int i=y*maxWid+x;
                 Quad *tileQuad=[layer quads],*textureQuad=[layer textureQuads];
                 CGPoint coords = CGPointMake(x, y);

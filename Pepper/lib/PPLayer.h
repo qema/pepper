@@ -13,6 +13,8 @@
 @interface PPLayer : PPStageElement
 
 @property (nonatomic) CGRect frame;
+/** For optimization, the rectangle (in world coords) to draw. Only used if size is nonzero */
+@property (nonatomic) CGRect drawRect;
 @property (nonatomic,strong) GLKBaseEffect *shader;
 
 -(id)initWithFrame:(CGRect)frame;

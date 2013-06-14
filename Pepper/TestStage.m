@@ -39,6 +39,8 @@
 
 -(void)update:(float)delta
 {
+    [super update:delta];
+    tileLayer.drawRect = self.camera.bounds;
     newSprite.scale = CGPointAdd(newSprite.scale, CGPointMake(.01, 0.01));
     //spriteLayer.rotation += 1;
     newSprite.rotation += 2;
@@ -55,6 +57,5 @@
         else
             [spritesheet sprite:sprite setFrame:@"player-l"];
     }
-    [super update:delta];
 }
 @end

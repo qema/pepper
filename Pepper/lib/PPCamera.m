@@ -21,6 +21,11 @@
     return self;
 }
 
+-(CGRect)bounds
+{
+    return CGRectMake(self.position.x-self.anchor.x*self.size.width, self.position.y-self.anchor.y*self.size.height, self.size.width, self.size.height);
+}
+
 -(GLKMatrix4)modelViewMatrix
 {
     CGPoint anchor = [self realAnchorBeforeTransformations];

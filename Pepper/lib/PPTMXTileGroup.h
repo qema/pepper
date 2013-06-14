@@ -27,6 +27,9 @@
 
 @property (nonatomic) int numberOfQuads;
 
+-(CGPoint)worldToMapCoords:(CGPoint)coords;
+-(CGPoint)mapToWorldCoords:(CGPoint)coords;
+
 -(id)initWithDictionary:(NSDictionary *)dict tileset:(PPTileset *)tileset;
 
 -(Quad *)quads;
