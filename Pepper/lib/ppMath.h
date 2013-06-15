@@ -11,7 +11,12 @@
 
 #define CGPointAdd(a,b) CGPointMake((a.x)+(b.x),(a.y)+(b.y))
 #define CGPointSub(a,b) CGPointMake((a.x)-(b.x),(a.y)-(b.y))
-#define CGPointMult(v,c) CGPointMake((v.x)*(c),(v.y)*(c))
-#define CGPointDiv(v,c) CGPointMake((v.x)/(c),(v.y)/(c))
+#define CGPointMult(a,b) CGPointMake((a.x)*(b.x),(a.y)*(b.y))
+#define CGPointDiv(a,b) CGPointMake((a.x)/(b.x),(a.y)/(b.y))
+
+#define CGPointAddScalar(a,v) CGPointMake((a.x)+(v),(a.y)+(v))
+#define CGPointSubScalar(a,v) CGPointMake((a.x)-(v),(a.y)-(v))
+#define CGPointMultScalar(a,v) CGPointMake((a.x)*(v),(a.y)*(v))
+#define CGPointDivScalar(a,v) CGPointMake((a.x)/(v),(a.y)/(v))
 
 #endif

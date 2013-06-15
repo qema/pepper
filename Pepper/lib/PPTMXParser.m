@@ -8,7 +8,7 @@
 
 #import "PPTMXParser.h"
 #import "PPFileUtils.h"
-#import "NSData+Base64.h"
+#import "NSData+extensions.h"
 
 @implementation PPTMXParser
 
@@ -30,7 +30,7 @@
             NSLog(@"Error: failed to load TMX file %@",file);
         
         // add tile properties to main dictionary under key "tiles"
-        [self.tilesetProperties addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:tileProperties, @"tiles", nil]];
+        [self.tilesetProperties setObject:tileProperties forKey:@"tiles"];
     }
     return self;
 }
@@ -48,7 +48,9 @@
             NSData *decoded = [NSData dataFromBase64String:string];
             if (!dataCompression) {
             } else if ([dataCompression isEqualToString:@"zlib"]) {
-                NSLog(@"Error: unsupported map compression format");
+                decoded = [decoded zlibInflate];
+            } else if ([dataCompression isEqualToString:@"gzip"]) {
+                decoded = [decoded gzipInflate];
             } else {
                 NSLog(@"Error: unsupported map compression format");
             }
@@ -70,7 +72,7 @@
         if (source) {   // external tileset
             PPTMXParser *parser = [[PPTMXParser alloc] initWithFile:source options:tmxParseExternalTileset];
             self.tilesetImageFile = [parser.tilesetImageFile copy];
-            self.tilesetProperties = [parser.tilesetProperties copy];
+            [self.tilesetProperties addEntriesFromDictionary:parser.tilesetProperties];
         }
         [self.tilesetProperties addEntriesFromDictionary:attributeDict];
         currentBlock = tmxBlockTileset;

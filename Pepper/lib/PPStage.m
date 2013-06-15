@@ -70,7 +70,7 @@
 {
     glClear(GL_COLOR_BUFFER_BIT);
     for (PPLayer *layer in self.layers) {
-        [layer useProjectionMatrix:[self.camera projectionMatrix] modelViewMatrix:[self.camera modelViewMatrix]];
+        [layer useProjectionMatrix:[self.camera projectionMatrix] modelViewMatrix:[self.camera modelViewMatrix] cameraBounds:[self.camera bounds]];
         [layer draw];
     }
 }

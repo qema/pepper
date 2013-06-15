@@ -24,14 +24,16 @@
 -(void)draw
 {
     [super draw];
-    CGRect rect=self.drawRect;
+    CGRect rect=self.bounds;
     if (!rect.size.width) {
         rect = CGRectMake(0, 0, self.tileMap.size.width, self.tileMap.size.height);
     }
     for (PPTMXTileGroup *layer in self.tileMap.layers) {
         CGPoint start=[layer worldToMapCoords:rect.origin];
-        int wid=ceil(rect.size.width/layer.tileSize.width);
-        int hei=ceil(rect.size.height/layer.tileSize.height);
+        start = CGPointMake(start.x/self.scale.x, start.y/self.scale.y);
+        
+        int wid=ceil(rect.size.width/layer.tileSize.width/self.scale.x);
+        int hei=ceil(rect.size.height/layer.tileSize.height/self.scale.y);
         int startx=start.x,starty=start.y;
         int maxWid=layer.mapSize.width,maxHei = layer.mapSize.height;
         for (int x=MAX(startx-1,0);x<MIN(startx+wid+1,maxWid);x++) {

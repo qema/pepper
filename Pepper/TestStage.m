@@ -20,30 +20,28 @@
    // enemySprite.anchor = CGPointZero;
     [spriteLayer addSprite:sprite];
     [spriteLayer addSprite:enemySprite];
-    [self addLayer:spriteLayer];
     [self.animationController addAnimationSequence:
      [NSArray arrayWithObjects:[PPAnimationMoveTo moveToWithStageElement:sprite destPosition:CGPointMake(300, 40) duration:2],
       [PPAnimationFrameTo frameToWithSprite:sprite destFrame:[spritesheet frameInfoForName:@"player-l"] duration:0],
       [PPAnimationMoveTo moveToWithStageElement:sprite destPosition:CGPointMake(20, 20) duration:2],
       [PPAnimationFrameTo frameToWithSprite:sprite destFrame:[spritesheet frameInfoForName:@"player-r"] duration:0],nil] repeat:YES];
-    newSprite = [spritesheet createSpriteWithFrame:@"player-d" position:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
+    newSprite = [spritesheet createSpriteWithFrame:@"player-r" position:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
     [spriteLayer addSprite:newSprite];
     
-    tileMap = [[PPTileMap alloc] initWithFile:@"map.tmx" tilesetScale:0.5];
+    tileMap = [[PPTileMap alloc] initWithFile:@"desert.tmx" tilesetScale:1];
     tileLayer = [[PPTileLayer alloc] initWithFrame:self.frame tileMap:tileMap];
     [self addLayer:tileLayer];
-    //tileMap = [[PPTileMap alloc] initWithMapFile:@"map.tmx" tilesetScale:0.5];
-    //tileLayer = [[PPTileLayer alloc] initWithFrame:self.frame tileMap:tileMap];
-    //[self addLayer:tileLayer];
+    [self addLayer:spriteLayer];
+    //self.camera.position = CGPointMake(tileMap.size.width/2, tileMap.size.height/2);
+    tileLayer.position = CGPointMake(0,0);
+    
+    //spriteLayer.position = CGPointMake(0, 0);
 }
 
 -(void)update:(float)delta
 {
+    newSprite.position = self.camera.position;
     [super update:delta];
-    tileLayer.drawRect = self.camera.bounds;
-    newSprite.scale = CGPointAdd(newSprite.scale, CGPointMake(.01, 0.01));
-    //spriteLayer.rotation += 1;
-    newSprite.rotation += 2;
     static int timer=0;
     timer++;
     if (timer%10 == 5) {

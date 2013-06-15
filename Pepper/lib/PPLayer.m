@@ -22,21 +22,26 @@
     return self;
 }
 
--(void)useProjectionMatrix:(GLKMatrix4)projection modelViewMatrix:(GLKMatrix4)modelView
+-(void)useProjectionMatrix:(GLKMatrix4)projection modelViewMatrix:(GLKMatrix4)modelView cameraBounds:(CGRect)bounds
 {
     self.shader.transform.projectionMatrix = projection;
     self.shader.transform.modelviewMatrix = modelView;
+    bounds.origin = CGPointMake(bounds.origin.x+self.position.x-self.anchor.x*self.size.width,bounds.origin.y+self.position.y-self.anchor.y*self.size.height);
+    bounds.size = CGSizeMake(bounds.size.width/self.scale.x, bounds.size.height/self.scale.y);
+    self.bounds = bounds;
 }
 
 -(void)draw
 {
     CGPoint anchor = [self realAnchorBeforeTransformations];
     // scale/rotate
-    GLKMatrix4 modelView = GLKMatrix4Translate(self.shader.transform.modelviewMatrix, anchor.x, anchor.y, 0);
+    GLKMatrix4 modelView = self.shader.transform.modelviewMatrix;
+    modelView = GLKMatrix4Translate(modelView, anchor.x, anchor.y, 0);
     modelView = GLKMatrix4Scale(modelView, self.scale.x, self.scale.y, 1);
     modelView = GLKMatrix4RotateZ(modelView, -GLKMathDegreesToRadians(self.rotation));
+    modelView = GLKMatrix4Translate(modelView, -self.position.x, -self.position.y, 0);
     // translate
-    self.shader.transform.modelviewMatrix = GLKMatrix4Translate(modelView, -self.position.x, -self.position.y, 0);
+    self.shader.transform.modelviewMatrix = modelView;
     
     [self.shader prepareToDraw];
     

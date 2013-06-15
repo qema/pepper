@@ -34,10 +34,13 @@ char *NewBase64Encode(
 	bool separateLines,
 	size_t *outputLength);
 
-@interface NSData (Base64)
+@interface NSData (Extensions)
 
 + (NSData *)dataFromBase64String:(NSString *)aString;
 - (NSString *)base64EncodedString;
+
+- (NSData *)zlibInflate;
+- (NSData *)gzipInflate;
 
 // added by Hiroshi Hashiguchi
 - (NSString *)base64EncodedStringWithSeparateLines:(BOOL)separateLines;

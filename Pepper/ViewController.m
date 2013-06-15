@@ -39,7 +39,7 @@
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
-    self.engine.stage.camera.position = CGPointSub(start, CGPointDiv(CGPointSub([touch locationInView:self.view],startTouchPos),self.engine.stage.camera.scale.x));
+    self.engine.stage.camera.position = CGPointSub(start, CGPointDivScalar(CGPointSub([touch locationInView:self.view],startTouchPos),self.engine.stage.camera.scale.x));
 }
 
 @end

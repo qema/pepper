@@ -23,7 +23,12 @@
 
 -(CGRect)bounds
 {
-    return CGRectMake(self.position.x-self.anchor.x*self.size.width, self.position.y-self.anchor.y*self.size.height, self.size.width, self.size.height);
+    if (!self.rotation) {
+        return CGRectMake(self.position.x-self.anchor.x*self.size.width, self.position.y-self.anchor.y*self.size.height, self.size.width, self.size.height);
+    } else {    // TBI
+        NSLog(@"unsupported: get bounds from rotated camera!");
+        return CGRectZero;
+    }
 }
 
 -(GLKMatrix4)modelViewMatrix

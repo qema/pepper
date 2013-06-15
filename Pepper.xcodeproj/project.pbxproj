@@ -28,13 +28,17 @@
 		49357052176A89E100D9F426 /* map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 49357051176A89E100D9F426 /* map.tmx */; };
 		49357054176A8B6E00D9F426 /* tileset.tsx in Resources */ = {isa = PBXBuildFile; fileRef = 49357053176A8B6E00D9F426 /* tileset.tsx */; };
 		49357056176A92D500D9F426 /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = 49357055176A92D500D9F426 /* tileset.png */; };
-		4949290E176AA5F300144E02 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4949290D176AA5F300144E02 /* NSData+Base64.m */; };
+		4949290E176AA5F300144E02 /* NSData+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4949290D176AA5F300144E02 /* NSData+extensions.m */; };
 		49492913176AAA3800144E02 /* PPTMXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49492912176AAA3800144E02 /* PPTMXParser.m */; };
 		49492918176AD32100144E02 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49492914176AD32100144E02 /* MainStoryboard_iPad.storyboard */; };
 		49492919176AD32100144E02 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49492916176AD32100144E02 /* MainStoryboard_iPhone.storyboard */; };
 		4949291C176AD32600144E02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4949291A176AD32600144E02 /* InfoPlist.strings */; };
 		4949291F176AD36F00144E02 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4949291D176AD36F00144E02 /* test.plist */; };
 		49492920176AD36F00144E02 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 4949291E176AD36F00144E02 /* test.png */; };
+		4967191C176BEA2900A1A2C5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4967191B176BEA2900A1A2C5 /* libz.dylib */; };
+		4967191F176BF14D00A1A2C5 /* desert.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 4967191D176BF14D00A1A2C5 /* desert.tmx */; };
+		49671920176BF14D00A1A2C5 /* tmw_desert_spacing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4967191E176BF14D00A1A2C5 /* tmw_desert_spacing.png */; };
+		49671922176BF15F00A1A2C5 /* desert.tsx in Resources */ = {isa = PBXBuildFile; fileRef = 49671921176BF15F00A1A2C5 /* desert.tsx */; };
 		496A9D99176B8E440028B99D /* PPTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 496A9D98176B8E440028B99D /* PPTileMap.m */; };
 		4973F04B1761615F00DAD940 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973F04A1761615F00DAD940 /* ViewController.m */; };
 		499A5C8E175E8FBD000C811E /* TestStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 499A5C8D175E8FBD000C811E /* TestStage.m */; };
@@ -93,8 +97,8 @@
 		49357053176A8B6E00D9F426 /* tileset.tsx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = tileset.tsx; path = Resources/tileset.tsx; sourceTree = "<group>"; };
 		49357055176A92D500D9F426 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tileset.png; path = Resources/tileset.png; sourceTree = "<group>"; };
 		49357057176A933400D9F426 /* ppTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ppTypes.h; path = lib/ppTypes.h; sourceTree = "<group>"; };
-		4949290C176AA5F300144E02 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "lib/NSData+Base64.h"; sourceTree = "<group>"; };
-		4949290D176AA5F300144E02 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "lib/NSData+Base64.m"; sourceTree = "<group>"; };
+		4949290C176AA5F300144E02 /* NSData+extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+extensions.h"; path = "lib/NSData+extensions.h"; sourceTree = "<group>"; };
+		4949290D176AA5F300144E02 /* NSData+extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+extensions.m"; path = "lib/NSData+extensions.m"; sourceTree = "<group>"; };
 		49492911176AAA3800144E02 /* PPTMXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPTMXParser.h; path = lib/PPTMXParser.h; sourceTree = "<group>"; };
 		49492912176AAA3800144E02 /* PPTMXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPTMXParser.m; path = lib/PPTMXParser.m; sourceTree = "<group>"; };
 		49492915176AD32100144E02 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
@@ -102,6 +106,10 @@
 		4949291B176AD32600144E02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4949291D176AD36F00144E02 /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = test.plist; path = Resources/test.plist; sourceTree = "<group>"; };
 		4949291E176AD36F00144E02 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = Resources/test.png; sourceTree = "<group>"; };
+		4967191B176BEA2900A1A2C5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4967191D176BF14D00A1A2C5 /* desert.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = desert.tmx; path = ../../../Tiled/examples/desert.tmx; sourceTree = "<group>"; };
+		4967191E176BF14D00A1A2C5 /* tmw_desert_spacing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tmw_desert_spacing.png; path = ../../../Tiled/examples/tmw_desert_spacing.png; sourceTree = "<group>"; };
+		49671921176BF15F00A1A2C5 /* desert.tsx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = desert.tsx; path = ../../../Tiled/examples/desert.tsx; sourceTree = "<group>"; };
 		496A9D97176B8E440028B99D /* PPTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTileMap.h; sourceTree = "<group>"; };
 		496A9D98176B8E440028B99D /* PPTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTileMap.m; sourceTree = "<group>"; };
 		4973F0491761615F00DAD940 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4967191C176BEA2900A1A2C5 /* libz.dylib in Frameworks */,
 				49D05902175D5E3200CA0F2E /* GLKit.framework in Frameworks */,
 				49D05903175D5E3200CA0F2E /* OpenGLES.framework in Frameworks */,
 				49D058DB175D5D8400CA0F2E /* UIKit.framework in Frameworks */,
@@ -183,8 +192,8 @@
 		49357009176A823700D9F426 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				4949290C176AA5F300144E02 /* NSData+Base64.h */,
-				4949290D176AA5F300144E02 /* NSData+Base64.m */,
+				4949290C176AA5F300144E02 /* NSData+extensions.h */,
+				4949290D176AA5F300144E02 /* NSData+extensions.m */,
 				49356FE1176A819300D9F426 /* ppConstants.h */,
 				49357057176A933400D9F426 /* ppTypes.h */,
 				49357004176A819400D9F426 /* ppMath.h */,
@@ -229,6 +238,7 @@
 		49D058D9175D5D8400CA0F2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4967191B176BEA2900A1A2C5 /* libz.dylib */,
 				49D05900175D5E3200CA0F2E /* GLKit.framework */,
 				49D05901175D5E3200CA0F2E /* OpenGLES.framework */,
 				49D058DA175D5D8400CA0F2E /* UIKit.framework */,
@@ -261,6 +271,9 @@
 				4949291D176AD36F00144E02 /* test.plist */,
 				4949291E176AD36F00144E02 /* test.png */,
 				49357051176A89E100D9F426 /* map.tmx */,
+				4967191D176BF14D00A1A2C5 /* desert.tmx */,
+				49671921176BF15F00A1A2C5 /* desert.tsx */,
+				4967191E176BF14D00A1A2C5 /* tmw_desert_spacing.png */,
 				49357053176A8B6E00D9F426 /* tileset.tsx */,
 				49357055176A92D500D9F426 /* tileset.png */,
 			);
@@ -383,6 +396,9 @@
 				4949291C176AD32600144E02 /* InfoPlist.strings in Resources */,
 				4949291F176AD36F00144E02 /* test.plist in Resources */,
 				49492920176AD36F00144E02 /* test.png in Resources */,
+				4967191F176BF14D00A1A2C5 /* desert.tmx in Resources */,
+				49671920176BF14D00A1A2C5 /* tmw_desert_spacing.png in Resources */,
+				49671922176BF15F00A1A2C5 /* desert.tsx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +430,7 @@
 				49D058EB175D5D8400CA0F2E /* AppDelegate.m in Sources */,
 				499A5C8E175E8FBD000C811E /* TestStage.m in Sources */,
 				4973F04B1761615F00DAD940 /* ViewController.m in Sources */,
-				4949290E176AA5F300144E02 /* NSData+Base64.m in Sources */,
+				4949290E176AA5F300144E02 /* NSData+extensions.m in Sources */,
 				49492913176AAA3800144E02 /* PPTMXParser.m in Sources */,
 				496A9D99176B8E440028B99D /* PPTileMap.m in Sources */,
 			);

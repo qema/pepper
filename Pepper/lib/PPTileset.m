@@ -28,8 +28,8 @@
 -(Quad)quadForTile:(int)tileID
 {
     int i = tileID-firstGID;
-    CGSize size = CGSizeMake(self.textureSize.width/self.tileSize.width, self.textureSize.height/self.tileSize.height);
-    CGRect rect = CGRectMake((i%(int)size.width)*self.tileSize.width, ((int)(i/size.width))*self.tileSize.height, self.tileSize.width, self.tileSize.height);
+    int rowLength = (self.textureSize.width+self.spacing)/(self.tileSize.width+self.spacing);
+    CGRect rect = CGRectMake((i%rowLength)*(self.tileSize.width+self.spacing)+self.margin,floor(i/rowLength)*(self.tileSize.height+self.spacing)+self.margin, self.tileSize.width, self.tileSize.height);
     Quad q;
     q.x1 = rect.origin.x+0.25; q.y1 = rect.origin.y+0.25;
     q.x2 = rect.origin.x+0.25; q.y2 = rect.origin.y+rect.size.height-0.25;

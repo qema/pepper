@@ -21,7 +21,8 @@
 //     distribution.
 //
 
-#import "NSData+Base64.h"
+#import "NSData+extensions.h"
+#import <zlib.h>
 
 //
 // Mapping from 6 bit pattern to ASCII character.
@@ -262,7 +263,7 @@ char *NewBase64Encode(
 	return outputBuffer;
 }
 
-@implementation NSData (Base64)
+@implementation NSData (Extensions)
 
 //
 // dataFromBase64String:
@@ -323,6 +324,97 @@ char *NewBase64Encode(
       encoding:NSASCIIStringEncoding];
 	free(outputBuffer);
 	return result;
+}
+
+- (NSData *)zlibInflate
+{
+	if ([self length] == 0) return self;
+    
+	unsigned full_length = [self length];
+	unsigned half_length = [self length] / 2;
+    
+	NSMutableData *decompressed = [NSMutableData dataWithLength: full_length + half_length];
+	BOOL done = NO;
+	int status;
+    
+	z_stream strm;
+	strm.next_in = (Bytef *)[self bytes];
+	strm.avail_in = [self length];
+	strm.total_out = 0;
+	strm.zalloc = Z_NULL;
+	strm.zfree = Z_NULL;
+    
+	if (inflateInit (&strm) != Z_OK) return nil;
+    
+	while (!done)
+	{
+		// Make sure we have enough room and reset the lengths.
+		if (strm.total_out >= [decompressed length])
+			[decompressed increaseLengthBy: half_length];
+		strm.next_out = [decompressed mutableBytes] + strm.total_out;
+		strm.avail_out = [decompressed length] - strm.total_out;
+        
+		// Inflate another chunk.
+		status = inflate (&strm, Z_SYNC_FLUSH);
+		if (status == Z_STREAM_END) done = YES;
+        else if (status == Z_BUF_ERROR) {
+            done = YES;
+        }
+		else if (status != Z_OK) break;
+	}
+	if (inflateEnd (&strm) != Z_OK) return nil;
+    
+	// Set real length.
+	if (done)
+	{
+		[decompressed setLength: strm.total_out];
+		return [NSData dataWithData: decompressed];
+	}
+	else return nil;
+}
+
+- (NSData *)gzipInflate
+{
+	if ([self length] == 0) return self;
+	
+	unsigned full_length = [self length];
+	unsigned half_length = [self length] / 2;
+	
+	NSMutableData *decompressed = [NSMutableData dataWithLength: full_length + half_length];
+	BOOL done = NO;
+	int status;
+	
+	z_stream strm;
+	strm.next_in = (Bytef *)[self bytes];
+	strm.avail_in = [self length];
+	strm.total_out = 0;
+	strm.zalloc = Z_NULL;
+	strm.zfree = Z_NULL;
+	
+	if (inflateInit2(&strm, (15+32)) != Z_OK) return nil;
+	while (!done)
+	{
+		// Make sure we have enough room and reset the lengths.
+		if (strm.total_out >= [decompressed length])
+			[decompressed increaseLengthBy: half_length];
+		strm.next_out = [decompressed mutableBytes] + strm.total_out;
+		strm.avail_out = [decompressed length] - strm.total_out;
+		
+		// Inflate another chunk.
+		status = inflate (&strm, Z_SYNC_FLUSH);
+		if (status == Z_STREAM_END) done = YES;
+        else if (status == Z_BUF_ERROR) done = YES;
+		else if (status != Z_OK) break;
+	}
+	if (inflateEnd (&strm) != Z_OK) return nil;
+	
+	// Set real length.
+	if (done)
+	{
+		[decompressed setLength: strm.total_out];
+		return [NSData dataWithData: decompressed];
+	}
+	else return nil;
 }
 
 
